@@ -16,7 +16,7 @@ class TBillingAddressSection extends StatelessWidget {
          TSectionHeading(title: 'Shipping Address', buttonTitle: 'Change', onPressed: (){},),
          Text('1234 P Road', style: Theme.of(context).textTheme.bodyLarge,),
 
-         const SizedBox(width: TSizes.spaceBtwItems / 2),
+         const SizedBox(width: TSizes.sm),
          Row(
           children: [
             const Icon(Icons.phone, color: Colors.grey, size: 16),
@@ -25,7 +25,7 @@ class TBillingAddressSection extends StatelessWidget {
           ],
          ),
 
-         const SizedBox(width: TSizes.spaceBtwItems / 2),
+         const SizedBox(width: TSizes.sm),
 
          
          Row(

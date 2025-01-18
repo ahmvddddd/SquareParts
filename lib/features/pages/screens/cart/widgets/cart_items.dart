@@ -56,22 +56,13 @@ class TCartItems extends StatelessWidget {
                       )
                     ],
                   ),
-                  if(showAddRemoveButtons) const SizedBox(height: TSizes.spaceBtwItems,),
+                  if(showAddRemoveButtons) const SizedBox(height: TSizes.xs,),
                     
                   if(showAddRemoveButtons)
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      
-                      // Row(
-                      //   children: [
-                      //     //Extra space
-                      //     const SizedBox(width: 70,),
-                      //     //Add and Remove Buttons
-                      //     TProductQuantityWithAddRemoveButton(),
-                      //   ],
-                      // ),
-                      TProductTitleText(title: '\$49.99'),
+                      TProductTitleText(title: '\u20A63,000'),
                     ],
                   ),
                 ],

@@ -16,40 +16,40 @@ class TBillingAmountSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('Subtotal', style: Theme.of(context).textTheme.bodyMedium,),
-            Text('\$99.98', style: Theme.of(context).textTheme.labelLarge,),
+            Text('\u20A66000', style: Theme.of(context).textTheme.labelLarge,),
           ]
         ),
 
-        const SizedBox(height: TSizes.spaceBtwItems / 2),
+        const SizedBox(height: TSizes.sm),
 
         //Shipping Fee
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('Shipping Fee', style: Theme.of(context).textTheme.bodyMedium,),
-            Text('\$10', style: Theme.of(context).textTheme.labelLarge,),
+            Text('\u20A65000', style: Theme.of(context).textTheme.labelLarge,),
           ]
         ),
         
-        const SizedBox(height: TSizes.spaceBtwItems / 2),
+        const SizedBox(height: TSizes.sm),
 
         //Tax Fee
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('Tax Fee', style: Theme.of(context).textTheme.bodyMedium,),
-            Text('\$0.00', style: Theme.of(context).textTheme.labelLarge,),
+            Text('\u20A60.00', style: Theme.of(context).textTheme.labelLarge,),
           ]
         ),
 
-        const SizedBox(height: TSizes.spaceBtwItems / 2),
+        const SizedBox(height: TSizes.sm),
 
         //Order Total
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('Order Total', style: Theme.of(context).textTheme.bodyMedium,),
-            Text('\$109.98', style: Theme.of(context).textTheme.titleMedium,),
+            Text('\u20A611,000', style: Theme.of(context).textTheme.titleMedium,),
           ]
         ),
       ],

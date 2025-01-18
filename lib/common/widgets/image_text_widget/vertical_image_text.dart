@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import '../../../utils/constants/colors.dart';
+import '../../../utils/constants/responsive.dart';
 import '../../../utils/constants/sizes.dart';
 import '../../../utils/helpers/helper_function.dart';
 
@@ -28,8 +29,10 @@ class TVerticalImageText extends StatelessWidget {
           children: [
             //Circular icon
             Container(
-              width: 56,
-              height: 56,
+              width: Responsive.tabIconWidth,
+              constraints: BoxConstraints(
+                maxHeight: Responsive.tabIconWidth,
+              ),
               padding: const EdgeInsets.all(TSizes.sm),
               decoration: BoxDecoration(
                 color: backgroundColor ?? (THelperFunctions.isDarkMode(context) ? TColors.black : TColors.white),
@@ -40,7 +43,7 @@ class TVerticalImageText extends StatelessWidget {
                 )
               ),
               child: Center(
-                child: Image(image: AssetImage(image), fit: BoxFit.cover,),
+                child: Image(image: AssetImage(image), fit: BoxFit.contain,),
               ),
             ),
           ],

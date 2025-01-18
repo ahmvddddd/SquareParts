@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import '../../../../../common/widgets/custom_shapes/containers/circular_container.dart';
 import '../../../../../common/widgets/images/t_rounded_image.dart';
 import '../../../../../utils/constants/colors.dart';
+import '../../../../../utils/constants/responsive.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../controllers/home_controller.dart';
 class TPromoSlider extends StatelessWidget {
@@ -32,7 +33,7 @@ class TPromoSlider extends StatelessWidget {
             banners.map((url) => Padding(
               padding: const EdgeInsets.all(2),
               child: TRoundedImage(
-                width: 390, backgroundColor: TColors.primary, imageUrl: url),
+                width: Responsive.promoSliderWidth, backgroundColor: TColors.primary, imageUrl: url),
             )).toList()
           
         ),

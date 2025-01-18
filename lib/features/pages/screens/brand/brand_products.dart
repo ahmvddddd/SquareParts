@@ -6,6 +6,7 @@ import '../../../../common/widgets/brands/brand_card.dart';
 import '../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../common/widgets/products/products_cards/product_card_vertical.dart';
 import '../../../../utils/constants/image_strings.dart';
+import '../../../../utils/constants/responsive.dart';
 import '../../../../utils/constants/sizes.dart';
 
 class BrandProducts extends StatelessWidget {
@@ -35,7 +36,9 @@ class BrandProducts extends StatelessWidget {
                 //products
                 SizedBox(height: TSizes.spaceBtwSections,),
                 TGridLayout(
+                  mainAxisExtent: Responsive.cardHeight,
                   itemCount: 4, itemBuilder: (_, index) =>  TProductCardVertical(
+                    width: Responsive.verticalCardWidth,
                     brand: brandName,
                     imageUrl: TImages.oil, title: 'Mobil Advanced Full Synthetic Oil',
                   ),),

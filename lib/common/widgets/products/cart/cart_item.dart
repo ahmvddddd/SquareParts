@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import '../../../../utils/constants/colors.dart';
+import '../../../../utils/constants/responsive.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/helpers/helper_function.dart';
-import '../../images/t_rounded_image.dart';
 import '../../texts/product_title_text.dart';
 import '../../texts/t_brand_title_text_with_verified_icon.dart';
 
@@ -19,15 +19,25 @@ class TCartItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
     return Row(
       children: [
         //image
-        TRoundedImage(imageUrl: imageUrl,
-        width: 60,
-        height: 60,
-        padding: EdgeInsets.all(TSizes.sm),
-        backgroundColor: THelperFunctions.isDarkMode(context) ? TColors.darkerGrey : TColors.light,
-        ),
+        Container(
+                width: Responsive.xsCardWidth,
+                constraints: BoxConstraints(maxHeight: Responsive.xsCardHeight),
+                decoration: BoxDecoration(
+                  color: dark ? TColors.darkerGrey : TColors.light,
+                    borderRadius: BorderRadius.circular(TSizes.borderRadiusLg)),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(TSizes.borderRadiusLg),
+                  child: Image.asset(
+                    imageUrl,
+                    height: 50,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
         const SizedBox(width: TSizes.spaceBtwItems),
 
         //Title, price and size
@@ -37,18 +47,6 @@ class TCartItem extends StatelessWidget {
           children:  [
             TBrandTitleTextWithVerifiedIcon(title: title1),
             Flexible(child: TProductTitleText(title: title2, maxlines: 1,)),
-
-            //Attributes
-            // Text.rich(
-            //   TextSpan(
-            //     children: [
-            //       TextSpan(text: 'Color', style: Theme.of(context).textTheme.bodySmall),
-            //       TextSpan(text: ' Green', style: Theme.of(context).textTheme.bodyLarge),
-            //       TextSpan(text: ' Size', style: Theme.of(context).textTheme.bodySmall),
-            //       TextSpan(text: ' Uk 08', style: Theme.of(context).textTheme.bodyLarge),
-            //     ]
-            //   )
-            // )
           ],
         )
       ],

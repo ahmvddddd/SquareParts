@@ -3,10 +3,12 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import '../../../../utils/constants/colors.dart';
+import '../../../../utils/constants/responsive.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/helpers/helper_function.dart';
 import '../../../styles/shadows.dart';
 import '../../custom_shapes/containers/rounded_container.dart';
+import '../../icons/t_circular_icon.dart';
 import '../../images/t_rounded_image.dart';
 import '../../texts/product_title_text.dart';
 import '../../texts/t_brand_title_text_with_verified_icon.dart';
@@ -26,7 +28,7 @@ class TProductCardVertical extends StatelessWidget {
     return GestureDetector(
       onTap: () {},
       child: Container(
-        width: 180,
+        width: Responsive.cardHeight,
         padding: const EdgeInsets.all(1),
         decoration: BoxDecoration(
           boxShadow: [TShadowStyle.verticalProductShadow],
@@ -45,14 +47,15 @@ class TProductCardVertical extends StatelessWidget {
                   topRight: Radius.circular(TSizes.borderRadiusLg)),
               color: dark ? TColors.dark : TColors.light,
                 ),
-              height: 130,
+              height: Responsive.cardHeight /2.2,
               width: width,
               padding: const EdgeInsets.all(TSizes.sm),
     
               child: Stack(
                 children: [
                   //Thumbnail Image
-                  TRoundedImage(imageUrl: imageUrl, applyImageRadius: false,),
+                  TRoundedImage(imageUrl: imageUrl, applyImageRadius: false,
+                  fit: BoxFit.contain,),
     
                   //sale tag
                   Positioned(
@@ -65,11 +68,11 @@ class TProductCardVertical extends StatelessWidget {
                     ),
                   ),
     
-                  //Favourite Icon Button
-                  // Positioned(
-                  //   top: 0,
-                  //   right: 0,
-                  //   child: TCircularIcon(icon: Iconsax.heart5, color: Colors.red,))
+                  // Favourite Icon Button
+                  Positioned(
+                    top: 0,
+                    right: 0,
+                    child: TCircularIcon(icon: Iconsax.heart5, color: Colors.red,))
                 ],
               ),
             ),
@@ -98,7 +101,7 @@ class TProductCardVertical extends StatelessWidget {
                       //Price
                       Padding(
                         padding: const EdgeInsets.only(left: TSizes.sm),
-                        child: TProductPriceText(price: '49.99',),
+                        child: TProductPriceText(price: '3,000',),
                       ),
 
                       //Add to cart

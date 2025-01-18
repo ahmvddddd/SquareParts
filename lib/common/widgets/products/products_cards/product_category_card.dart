@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../utils/constants/colors.dart';
+import '../../../../utils/constants/responsive.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../custom_shapes/containers/rounded_container.dart';
 
@@ -11,7 +12,7 @@ class ProductCategoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  TRoundedContainer(
-      width: 60,
+      width: Responsive.tabIconWidth,
       backgroundColor: Colors.transparent,
       borderColor: TColors.white,
       showBorder: true,

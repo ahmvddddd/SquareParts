@@ -25,7 +25,7 @@ class TBrandCard extends StatelessWidget {
     //container image
     child: TRoundedContainer(
       showBorder: showBorder,
-      padding: const EdgeInsets.all(TSizes.sm),
+      padding: const EdgeInsets.all(TSizes.xs),
       backgroundColor: Colors.transparent,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -33,13 +33,15 @@ class TBrandCard extends StatelessWidget {
           // Icon
           Flexible(
             child: TCircularImage(
+              width: 30,
+              height: 30,
               isNetworkImage: false,
               image: brandImage,
               fit: BoxFit.contain,
               backgroundColor: Colors.transparent,
             ),
           ),
-          const SizedBox(width: TSizes.spaceBtwItems / 2,),
+          const SizedBox(width: TSizes.sm),
                     
           //Text
           Expanded(
@@ -61,5 +63,3 @@ class TBrandCard extends StatelessWidget {
                     );
   }
 }
-
-//isDark ? TColors.white : TColors.black,

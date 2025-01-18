@@ -5,6 +5,7 @@ import '../../../../common/widgets/custom_shapes/containers/searchbar.dart';
 import '../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../common/widgets/products/products_cards/product_card_vertical.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
+import '../../../../utils/constants/responsive.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../models/category_model.dart';
 import '../home/home_widgets/promo_slider.dart';
@@ -20,17 +21,17 @@ class ShopScreen extends StatelessWidget {
           title: Text('Shop',
           style: Theme.of(context).textTheme.headlineSmall,),
         ),
-        bottomNavigationBar: //Search bar
-        const Padding(
-          padding: EdgeInsets.all(TSizes.spaceBtwItems),
-          child: TSearchBar(),
-        ),
         body:  SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(TSizes.spaceBtwItems),
             child: Column(
               children: [
+
+                //search
+                const TSearchBar(),
+
                 //categories
+                const SizedBox(height: TSizes.spaceBtwItems,),
                     const TPromoSlider(
                       autoplay: true,
                       banners: [TImages.abroFluid, TImages.castrolOil, TImages.michelinTire],),
@@ -40,9 +41,9 @@ class ShopScreen extends StatelessWidget {
                 const TSectionHeading(title: 'All Products', showActionButton: false,),
                 const SizedBox(height: TSizes.spaceBtwItems,),
                 TGridLayout(
-                  mainAxisExtent: 258,
+                  mainAxisExtent: Responsive.cardHeight,
                   itemCount: shopList.length, itemBuilder: (_, index) =>  TProductCardVertical(
-                    width: 180,
+                    width: Responsive.verticalCardWidth,
                     imageUrl: shopList[index].imageUrl, title: shopList[index].title, brand: shopList[index].title,
                   ),),
               ],

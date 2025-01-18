@@ -24,17 +24,6 @@ class CheckoutScreen extends StatelessWidget {
         appBar: TAppBar(
           title: Text('Cart',style: Theme.of(context).textTheme.headlineSmall,),
         ),
-        // bottomNavigationBar: Padding(
-        //   padding: const EdgeInsets.all(TSizes.spaceBtwItems),
-        //   child: ElevatedButton(
-        //     onPressed: () {},
-        //     style: ElevatedButton.styleFrom(backgroundColor:  TColors.primary),
-        //     child: Text(
-        //       'Proceed',
-        //       style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: Colors.white),
-        //     ),
-        //   ),
-        // ),
         body: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.all(TSizes.spaceBtwItems),
@@ -42,7 +31,7 @@ class CheckoutScreen extends StatelessWidget {
               children: [
                 //Items in cart
                 TSectionHeading(
-                  title: 'Cart',
+                  title: 'Cart Items',
                   showActionButton: false,
                 ),
                 const SizedBox(height: TSizes.spaceBtwItems,),
@@ -85,23 +74,16 @@ class CheckoutScreen extends StatelessWidget {
                       //Address
                       TBillingAddressSection(),
 
+                      //pay
                       const SizedBox(height: TSizes.spaceBtwSections,),
-                      Container(
-                      height: 55,
+                      SizedBox(
                       width: double.infinity,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          width: 1,
-                          color: Colors.white
-                        ),
-                        borderRadius: BorderRadius.circular(TSizes.borderRadiusLg)
-                      ),
                       child: OutlinedButton(
                         onPressed: () {},
                         style: OutlinedButton.styleFrom(backgroundColor: TColors.primary),
                         child: Text(
                           'Pay',
-                          style: Theme.of(context).textTheme.labelLarge!.copyWith(color: Colors.white),
+                          style: Theme.of(context).textTheme.labelSmall!.copyWith(color: Colors.white),
                         ),
                       ),
                     ),

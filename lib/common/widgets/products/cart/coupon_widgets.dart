@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import '../../../../utils/constants/colors.dart';
+import '../../../../utils/constants/responsive.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../custom_shapes/containers/rounded_container.dart';
 import '../../../../utils/helpers/helper_function.dart';
@@ -16,6 +17,7 @@ class TCouponCode extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
     return TRoundedContainer(
+      width: Responsive.searchContainerWidth,
       showBorder: true,
       backgroundColor: Colors.transparent,
       padding: const EdgeInsets.all(TSizes.xs),
@@ -42,11 +44,12 @@ class TCouponCode extends StatelessWidget {
             ),
 
             //Button
-            SizedBox(width: 80,
+            SizedBox(width: Responsive.searchContainerWidth / 5,
+            height: Responsive.buttonHeight,
              child: ElevatedButton(onPressed: (){},
              style: ElevatedButton.styleFrom(backgroundColor:  TColors.primary),
               child: Text('Apply',
-              style: Theme.of(context).textTheme.labelLarge!.copyWith(color: Colors.white),)
+              style: Theme.of(context).textTheme.labelSmall!.copyWith(color: Colors.white),)
               ),
               ),
         ],

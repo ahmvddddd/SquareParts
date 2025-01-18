@@ -1,17 +1,17 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, sized_box_for_whitespace
+// ignore_for_file: sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import '../../../../utils/constants/colors.dart';
-import '../../../../utils/constants/image_strings.dart';
-import '../../../../utils/constants/responsive.dart';
-import '../../../../utils/constants/sizes.dart';
-import '../../../../utils/helpers/helper_function.dart';
-import '../../custom_shapes/containers/rounded_container.dart';
-import '../../texts/t_brand_title_text_with_verified_icon.dart';
+import '../../../../../common/widgets/custom_shapes/containers/rounded_container.dart';
+import '../../../../../common/widgets/texts/t_brand_title_text_with_verified_icon.dart';
+import '../../../../../utils/constants/colors.dart';
+import '../../../../../utils/constants/image_strings.dart';
+import '../../../../../utils/constants/responsive.dart';
+import '../../../../../utils/constants/sizes.dart';
+import '../../../../../utils/helpers/helper_function.dart';
 
-class TProductCardHorizontal extends StatelessWidget {
-  const TProductCardHorizontal({super.key});
+class HorizontalCard extends StatelessWidget {
+  const HorizontalCard({super.key});
 
   @override
   Widget build(BuildContext context) {

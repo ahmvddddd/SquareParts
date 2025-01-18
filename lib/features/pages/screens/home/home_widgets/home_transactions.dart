@@ -6,8 +6,6 @@ import 'package:iconsax/iconsax.dart';
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../personalization/screens/transactions/add.dart';
-import '../../../../personalization/screens/transactions/recieve.dart';
-import '../../../../personalization/screens/transactions/send.dart';
 
 class HomeTransactions extends StatelessWidget {
   const HomeTransactions({
@@ -21,7 +19,7 @@ class HomeTransactions extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         GestureDetector(
-          onTap: () => Get.to(() => SendScreen()) ,
+          onTap: () {} ,
           child: Container(
             height: 50,
             width: 100,
@@ -40,7 +38,7 @@ class HomeTransactions extends StatelessWidget {
         ),
 
         GestureDetector(
-          onTap: () => Get.to(() => RecieveScreen()) ,
+          onTap: () {} ,
           child: Container(
             height: 50,
             width: 100,
